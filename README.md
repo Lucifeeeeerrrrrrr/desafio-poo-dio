@@ -1,152 +1,78 @@
-<h1> Desafio: Aprenda na Prática Programação Orientada a Objetos</h1>
+# 📚 DIO - Bootcamp Portfolio (Conteúdo, Curso, Mentoria e Dev)
 
-<p align="center"> 📜 <a href="https://academiapme-my.sharepoint.com/:p:/g/personal/camila_cavalcante_dio_me/EaXyYOjBaFpZjkxhexMo5EcBKMEEAI5t5aHlsTjnBQJlUw?e=nxdB6C"> SLIDES APRESENTADO NO PROJETO </a> 📜 </P>
-<p> Sejam bem-vindos ao desafio: <strong>APRENDENDO NA PRÁTICA O PARADIGMA DE ORIENTAÇÃO A OBJETOS.</strong><br>Desafio este que tive a honra de co-criar com a plataforma de cursos online <strong><a href="https://web.digitalinnovation.one/">DIGITAL INNOVATION ONE</a></strong> 💛🧡 e disponibilizado de forma gratuita para a comunidade dos desenvolvedores Java.<br>
-    💎 O objetivo principal é colocar em prática umas das principais ferramentas da OO: <strong>ABSTRAÇÃO, ENCAPSULAMENTO, HERANÇA E POLIMORFISMO,</strong> através de um projeto Java. </p>
+Este repositório reúne um **portfólio de aprendizado em Java e Programação Orientada a Objetos (POO)**, inspirado tanto pela estrutura de Bootcamps da [DIO](https://www.dio.me/) quanto pelos meus próprios estudos em **arquétipos, guerra cibernética e inteligência artificial** (documentados em arquivos como `GhostProtocol.md`, `CyberCthulu.Faca-seALuz.md` e `CN6.csv`).
 
+---
 
+## 🚀 O Projeto
 
-<h2>🛑 Pré-Requisitos</h2>
+O sistema foi construído em **Java**, utilizando **herança, polimorfismo e abstração** para modelar uma estrutura de Bootcamp:
 
-<p>
-✅ Conhecer a sintaxe da Java<br>
-✅ Java JDK 11<br>
-✅ IDE para desenvolvimento Java (usarei IntelliJ)<br>
-✅ Git<br>
-✅ Conta no GitHub<br>
-</p>
+- **Classe `Conteudo`**  
+  Classe abstrata que representa qualquer conteúdo educacional. Define o **XP padrão** e obriga as subclasses a implementarem seu próprio cálculo de experiência.
 
+- **Classe `Curso`**  
+  Especialização de `Conteudo`. Possui uma **carga horária** que multiplica o XP.  
+  → Aprendi como aplicar **sobrescrita de métodos** para customizar o cálculo de experiência.
 
-<h2> 👣 Passo-a-Passo</h2>
+- **Classe `Mentoria`**  
+  Também herda de `Conteudo`. Aqui o XP é fixo: o valor base + bônus.  
+  → Exercício de como **variar comportamentos em subclasses**.
 
-<p>
-<strong>	1.</strong> Vamos ABSTRAIR o DOMÍNIO Bootcamp e MODELAR seus ATRIBUTOS E MÉTODOS <br>
-<strong>	2.</strong> Criaremos as CLASSES: Bootcamp, Cursos, Mentorias e Devs e vamos relaciona-las <br>
-<strong>	3.</strong> As CLASSES Curso, Mentoria e Devs também serão MODELADOS, ou seja, criaremos seus ATRIBUTOS E MÉTODOS <br> 
-<strong>	4.</strong> Para que o código fique mais legível e de fácil manutenção, iremos utilizar de algumas das ferramentas que o PARADIGMA DE ORIENTAÇÃO A OBJETOS (POO) nos oferece: ABSTRAÇÃO, ENCAPSULAMENTO, HERANÇA E POLIMORFISMO <br>
-<strong>	5.</strong> E para representar CLASSES que foram criadas e relacionadas, iremos transforma-las em OBJETOS<br>
-</p>
+- **Classe `Dev`**  
+  Representa o desenvolvedor inscrito no Bootcamp.  
+  - Pode se inscrever em cursos/mentorias.  
+  - Pode **progredir** (avançando no aprendizado).  
+  - Calcula o **total de XP acumulado**.  
+  → Foi aqui que trabalhei **coleções (`Set`)**, **Optional**, **stream API** e **boas práticas de equals/hashCode**.
 
-----
+---
 
-<h2> 📚 Paradigma de Programação Orientado a Objetos (POO) </h2>
+## 🧠 O que aprendi
 
-<p>
-A visão de Orientação a Objetos (OO) é aquela de um mundo de objetos que interagem.<br>
-Este paradigma é um modelo de análise, projeto e programação baseado na aproximação entre o mundo real e o mundo virtual, através da criação e interação entre classes, atributos, métodos, objetos, entre outros.<br>
-São 4 os pilares principais do POO: ABSTRAÇÃO, ENCAPSULAMENTO, HERANÇA E POLIMORFISMO. 
-</p>
+1. **Programação Orientada a Objetos (POO)**  
+   - Abstração, herança, encapsulamento e polimorfismo.  
+   - Estrutura de classes reutilizáveis e organização de código.
 
+2. **Java Moderno**  
+   - Uso de `Optional` e `ifPresentOrElse`.  
+   - API de Streams (`mapToDouble`, `sum`).  
+   - Pattern matching em `instanceof`.
 
-<h3>🔺 ABSTRAÇÃO:</h3>
+3. **Boas Práticas**  
+   - Código mais limpo e conciso (refatoração dos getters/setters).  
+   - Comentários documentados no estilo Javadoc/PEP8.  
+   - Uso de `Set` para evitar duplicações e preservar ordem lógica (`LinkedHashSet`).
 
-<p>
-Habilidade de concentrar-se nos aspectos essenciais de um domínio, ignorando características menos importantes ou acidentais. Nesse contexto, objetos são abstrações de entidades existentes no domínio em questão.</p>
+---
 
-<h3>🔺 ENCAPSULAMENTO:</h3>
+## 🔮 Conexão com os Arquivos CSV/MD
 
-<p> Encapsular significa esconder a implementação dos objetos. O encapsulamento favorece principalmente dois aspectos de um sistema: a manutenção e a evolução.</p>
+Os arquivos adicionais (`GhostProtocol.md`, `CyberCthulu.Faca-seALuz.md`, `CN6.csv`) foram usados como **inspiração conceitual** para entender e aplicar Java de forma mais profunda:
 
-<h3>🔺 HERANÇA:</h3>
+- **Ghost Protocol (Arquétipos Junguianos)**  
+  Cada classe do projeto pode ser vista como um **arquétipo**:  
+  - `Conteudo` → o **Sage** (sabedoria base).  
+  - `Curso` → o **Warrior** (disciplina e repetição).  
+  - `Mentoria` → o **Magician** (transforma conhecimento em prática).  
+  - `Dev` → o **Rebel** (desafia, progride e transforma XP em poder).  
 
-<p>Permite que você defina uma classe filha que reutiliza (herda), estende ou modifica o comportamento de uma classe pai. A classe cujos membros são herdados é chamada de classe base. A classe que herda os membros da classe base é chamada de classe derivada.</p>
+- **CyberCthulu (Caos e Luz)**  
+  Assim como no texto, Java mostrou-se a **infraestrutura sólida** para manipular sistemas:  
+  - Permite criar **ordem a partir do caos** (organizar o aprendizado em classes).  
+  - Funciona como o **grimório pesado** que garante robustez.
 
-<h3> 🔺 POLIMORFISMO:</h3>
+- **CN6.csv (Mapeamento técnico)**  
+  Mostra como é possível **modelar dados complexos em estruturas bem definidas**.  
+  O mesmo raciocínio foi aplicado em Java: transformar linhas de conhecimento em **objetos com comportamento**.
 
-<p>Capacidade de um objeto poder ser referenciado de várias formas. Cuidado, polimorfismo não quer dizer que o objeto fica se transformando, muito pelo contrário, um objeto nasce de um tipo e morre daquele tipo, o que pode mudar é a maneira como nos referimos a ele. A capacidade de tratar objetos criados a partir das classes específicas como objetos de uma classe genérica é chamada de polimorfismo.</p>
-<br>
-<h2 align="center"> ‼️ CONCEITOS FUNDAMENTAIS POO ‼️ </h2>
-<p>
-<h3>🔻 DOMÍNIO:</h3> 
-Domínio da aplicação, também conhecida como camada de negócio ou de objetos de negócio, é aquela onde estão localizadas as classes que fazem parte do domínio do problema, ou seja, classes correspondentes a objetos que fazem parte da descrição do problema.
+---
 
-<h3>🔻 CLASSE: </h3> 
-Um elemento do código que tem a função de representar objetos do mundo real. Dentro dela é comum declararmos atributos e métodos, que representam, respectivamente, as características e comportamentos desse objeto.
+## 🎯 Conclusão
 
-<h3>🔻 ATRIBUTO: </h3>
-Atributos são, basicamente, a estrutura de dados que vai representar a classe. Os atributos também são conhecidos como VARIÁVEL DE CLASSE, e podem ser divididos em dois tipos básicos: atributos de instância e de classe. 
+Este portfólio é mais que um simples exercício:  
+- É a síntese entre **aprendizado técnico em Java** e **exploração conceitual** de como sistemas (educacionais, cibernéticos ou arquetípicos) podem ser modelados.  
+- Aprendi não apenas a escrever código, mas a enxergar a **programação como narrativa**: cada classe é um papel, cada método é uma ação, e o Bootcamp é a arena onde tudo se conecta.  
 
-<h3>🔻 VARIÁVEL: </h3>
-Uma “região de memória (do computador) previamente identificada cuja finalidade é armazenar os dados ou informações de um programa por um determinado espaço de tempo”.
+> *"Não criamos a maconha, mas fumamos a fumaça de servidores queimados."* – Ghost Protocol  
 
-<h3>🔻 MÉTODO: </h3>
-Os métodos representam os estados e ações dos objetos e classes.
-
-<h3>🔻 OBJETO: </h3>
-Em POO, objeto é um "molde" de uma determinada classe, que passa a existir a partir de uma instância da classe. A classe define o comportamento do objeto, usando atributos (propriedades) e métodos (ações).
-Objeto em ciência da computação, é uma referência a um local da memória que possui um valor. Um objeto pode ser uma variável, função, ou estrutura de dados. 
-
-<h3>🔻 INSTÂNCIA: </h3>
-Uma instância de uma classe é um novo objeto criado dessa classe, com o operador new. Instanciar uma classe é criar um novo objeto do mesmo tipo dessa classe. Uma classe somente poderá ser utilizada após ser instanciada.
-
-</p>
-    
-------------
-<br>
-
-<h2> 🧮 Linguagem de Programação vs Paradigma de Linguagem de Programação</h2>
-
-<p>
-<h3> ✨ LINGUAGEM DE PROGRAMAÇÃO:</h3> 
-É uma linguagem formal que, através de uma série de instruções, permite que um programador escreva um conjunto de ordens, ações consecutivas, dados e algoritmos para criar programas que controlam o comportamento físico e lógico de uma máquina.<br>
-Seguem alguns exemplos de como as linguagens de programação podem ser classificadas:<br>
-<br>
-🔺 Nível de abstração:<br>
-Baixo Nível: Assembly<br>
-Médio Nível: C, C++, D, Objective C, etc.<br>
-Alto Nível: Java, C#, PHP, Javascript, etc.<br>
-Altíssimo Nível: Python, Ruby, Elixir, etc.<br>
-<br>
-🔺 Paradigma de programação:<br>
-Programação Estruturada: C, Pascal, Ada, etc.<br>
-Programação Orientada a Objetos: Java, C#, C++, Objective C, D, etc.<br>
-Programação Funcional: Lisp, Scheme, Erlang, Elixir, etc.<br>
-<br>
-🔺 Linguagens classificadas pela arquitetura da aplicação:<br>
-Desktop: C, C++, Object Pascal, Java, etc.<br>
-Web: PHP, Ruby, Javascript, Java, etc.<br>
-<br>
-🔺 Tipo de execução:<br>
-Linguagens compiladas: C, C++, Pascal, D, GO, etc.<br>
-Linguagens Interpretadas: Python, Ruby, PHP, Javascript, etc.<br>
-Linguagens Hibridas: Java, Erlang, Elixir, etc.<br>
-
-
-<h3> ✨ PARADIGMA DE LINGUAGEM DE PROGRAMAÇÃO</h3> 
-
-É um conjunto de características que podem ser utilizados para categorizar determinado grupo de linguagens. Um paradigma pode oferecer técnicas apropriadas para uma aplicação específica.<br>
-<br>
-<strong>PARADIGMAS PRINCIPAIS e SEUS SUBPARADIGMAS</strong><br>
-
-🔸 <strong>1. Paradigma Imperativo</strong><br>
-Neste paradigma, o programa descreve o processamento necessário para solucionar o problema. Assim, o paradigma imperativo é caracterizado por execução sequencial de instruções, pelo uso de variáveis que representam posições de memória e pelo uso de instruções de atribuição que alteram os valores dessas variáveis.<br>
-Vejamos alguns Subparadigmas do Paradigma Imperativo e exemplos linguagens de programação que adotam esses subparadigmas.<br>
-<br>
-🔸  1.1 Paradigma estruturado:  ALGOL 58 e ALGOL 60 <br>
-🔸  1.2 Paradigma concorrente: Java e Ada<br>
-🔸  1.3 Paradigma Orientado a Objetos: Smalltalk e Java<br>
-<br>
-🔹 <strong>2. Paradigma Declarativo</strong><br>
-Este paradigma é o modelo no qual os resultados são descritos, mas os passos para chegar aos resultados não são estabelecidos.<br>
-Vejamos alguns Subparadigmas do Paradigma Declarativo e exemplos linguagens de programação que adotam esses subparadigmas:<br>
-<br>
-🔹 2.1 Paradigma Funcional: Lisp e Haskell<br>
-🔹 2.2 Paradigma Lógico: Prolog<br>
-</p>
-
-<h2> 🤝 Contribuindo </h2>
-
-<p>
-Este repositório foi criado para fins de estudo, então contribua com ele.<br>
-Se te ajudei de alguma forma, ficarei feliz em saber. E caso você conheça alguém que se identidique com o conteúdo, não deixe de compatilhar.<br>
-<br>
-Se possível:<br>
-⭐️  Star o projeto<br>
-🐛 Encontrar e relatar issues<br>
-</p>
-
-
-
-------------
-
-Disponibilizado com ♥ por [cami-la](https://www.linkedin.com/in/cami-la/ "cami-la").
